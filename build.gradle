@@ -1,0 +1,30 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+}
+
+group 'dev.rosewood'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+
+    maven { url = 'https://jitpack.io/' }
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'io.netty:netty-all:4.1.51.Final'
+    //implementation 'br.com.gamemods:nbt-manipulator:2.0.0'
+    implementation 'com.github.jglrxavpok:Hephaistos:v1.0.5'
+    implementation 'com.esotericsoftware:reflectasm:1.11.9'
+    implementation 'it.unimi.dsi:fastutil:8.4.1'
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.21'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.4.21'
+    implementation 'org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.16'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = 1.8
+}
